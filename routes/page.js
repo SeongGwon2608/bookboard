@@ -52,6 +52,31 @@ router.get('/main', login, async (req, res) => {
     }
 });
 
+router.get('/myboard', login, async (req, res) => {
+    try {
+        //main 화면에 띄울 데이터 가져오기
+        memberid = req.cookies['memberId'];
+        const posts = await Post.findAll({where: { memberId: memberid },
+            include: {
+                model: Member, attributes: ['id', 'nickname'],
+            },
+            order: [['createdAt', 'DESC']],
+        });
+        loginemail = req.cookies['loginemail'];
+        Member.findOne({ where: { email: loginemail } }).then((member) => {
+            res.render('main', {
+                title: '포스트 보기',
+                members: member,
+                twits: posts,
+                my: 'true',
+            });
+        });
+    } catch (err) {
+        console.error(err);
+        next(err);
+    }
+});
+
 //post 생성
 router.get('/post', login, async (req, res) => {
     res.render('post', {
