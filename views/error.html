@@ -1,0 +1,6 @@
+<!-- Error 상황시 보여줄 화면 작성 -->
+{% block content %}
+<h1>{{message}}</h1>
+<h2>{{error.status}}</h2>
+<pre>{{error.stack}}</pre>
+{% endblock %}

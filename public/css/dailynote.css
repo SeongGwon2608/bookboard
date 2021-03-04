@@ -1,0 +1,38 @@
+.createnote {
+    margin-top: 10px;
+    width: 100%;
+
+    display: inline-block;
+    border-radius: 4px;
+    vertical-align: top;
+}
+@media screen and (min-width: 800px) { .createnote { width: 500px; } }
+
+#daily-form {
+    text-align: left;
+    border-bottom: 1px solid silver;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.daily-sub{
+    text-align: center;
+}
+.input-group { margin-bottom: 20px;}
+.input-group input {
+  width: 70%; height: 20px;
+  margin-bottom: 10px;
+}
+.btn{
+    width: 30%;
+  }
+
+textarea {
+    width: 82%;
+    height: 100px;
+    border: 1px solid silver;
+    border-radius: 4px;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}

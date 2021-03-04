@@ -1,0 +1,27 @@
+/* index.html의 css 코드 작성*/
+ 
+.input-group { margin-bottom: 10px;}
+.input-group input {width: 70%; height: 20px;}
+
+.btn{
+    width: 100px;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    align-content: center;
+}
+@media screen{
+    .container { width: 200px; margin: 0 auto;}
+}
+
+.wrap {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 0;
+}
+@media screen{
+    .wrap { width: 290px; margin-bottom: 0; }
+}

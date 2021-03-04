@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/public.css">
+    <link rel="stylesheet" href="/css/post.css">
+</head>
+
+<body>
+    <header>
+        <h1>BookBoard</h1>
+    </header>
+    <div class="createpost">
+        <div>
+            <form id="twit-form" action="/post" method="post" enctype="multipart/form-data">
+                <div class="input-group">
+                    <p>제목 : 
+                    <input id="data-bookName" name="bookName" type="text" maxlength="50"></p>
+                    <p>작가 : 
+                    <input id="data-author" name="author" type="text" maxlength="30"></p>
+                    <p>출판 : 
+                    <input id="data-publisher" name="publisher" type="text" maxlength="30"></p>
+                    <p>장르 : 
+                    <input id="data-genre" name="genre" type="text" maxlength="30"></p>
+                    <p>ISBN : 
+                    <input id="data-ISBN" name="ISBN" type="text" maxlength="30"></p>
+                    <p>서평</p>
+                    <textarea id="twit" name="content" maxlength="150"></textarea>
+                </div>
+                <!-- <div class="img-preview">
+                    <img id="img-preview" src="" style="display: none;" width="250" alt="미리보기">
+                    <input id="img-url" type="hidden" name="url">
+                </div> -->
+                <div class="twit-sub">
+                    <label id="img-label" for="img" class="btn">사진 업로드</label>
+                    <input id="img" type="file" accept="image/*">
+                    <button id="twit-btn" type="submit" class="btn">작성 완료</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    <!-- <script>
+        if(document.getElementById('img')){
+            document.getElementById('img').addEventListener('change', function(e){
+                const formData = new FormData();
+                console.log(this, this.files);
+                formData.append('img', this.files[0]);
+                axios.post('/post/img', formData).then((res) => {
+                    document.getElementById('img-url').value = res.data.url;
+                    document.getElementById('img-preview').src = res.data.url;
+                    document.getElementById('img-preview').style.display = 'inline';
+                }).catch((err) => {
+                    console.error(err);
+                });
+            });
+        }
+        
+    </script> -->
+</body>
+
+</html>
