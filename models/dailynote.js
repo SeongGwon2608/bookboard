@@ -7,10 +7,9 @@ module.exports = class DailyNote extends Sequelize.Model{
             writer : { 
                 type: Sequelize.STRING(40),
                 allowNull: false,
-                unique: true,
             },
             content : {
-                type: Sequelize.STRING(200),
+                type: Sequelize.STRING(500),
                 allowNull: false,
             },
         }, {

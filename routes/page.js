@@ -68,7 +68,6 @@ router.get('/myboard', login, async (req, res) => {
                 title: '포스트 보기',
                 members: member,
                 twits: posts,
-                my: 'true',
             });
         });
     } catch (err) {

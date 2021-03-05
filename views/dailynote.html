@@ -14,7 +14,9 @@
     <header>
         <h1>DailyNote</h1>
     </header>
-    <div class="createnote">
+    
+    <div class="createnote half">
+        <p class="conform">작성한 일지 확인</p>
         <form id="daily-form" action="/dailynote" method="post">
             <div class="input-group">
                 <p>작성자 :
@@ -28,8 +30,9 @@
             </div>
         </form>
     </div>
+    <p class="create">작업 일지 작성</p>
     {% for day in days %}
-    <div class="twit">
+    <div class="twit half">
         <div class="twit-author">작성자 : {{day.writer}}</div>
         <div class="twit-content">내용 : {{day.content}}</div>
     </div>

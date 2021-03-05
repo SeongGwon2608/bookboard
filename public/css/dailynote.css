@@ -8,6 +8,8 @@
 }
 @media screen and (min-width: 800px) { .createnote { width: 500px; } }
 
+.half { float: left; width: 40%; margin: 10px 0; }
+
 #daily-form {
     text-align: left;
     border-bottom: 1px solid silver;
@@ -35,4 +37,18 @@ textarea {
     padding: 10px;
     position: relative;
     margin-bottom: 10px;
+}
+
+.conform{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.create{
+    float: left; 
+    width: 40%; 
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+.twit{
+    text-align: left;
 }
