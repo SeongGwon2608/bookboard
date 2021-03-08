@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/public.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>'{{members.nickname}}' 유저 검색 결과</h1>
+    </header>
+    <div class="twits">
+        {% for twit in twits %}
+        <div class="twit">
+            <input type="hidden" value="{{twit.Member.id}}" class="twit-member-id">
+            <input type="hidden" value="{{twit.id}}" class="twit-id">
+            <div class="twit-author">작성자 : {{members.nickname}}</div>
+
+            <!--내 팔로워 아이디 목록에 게시즐 작성자 아이디가 없으면 팔로우 버튼을 보여줌-->
+            {% if not followerIdList.includes(twit.Member.id) and twit.Member.id !== members.id %}
+            <!-- <button class="twit-follow">팔로우 하기</button> -->
+            {% endif %}
+            <div class="twit-bookname">제목 : {{twit.bookName}}</div>
+            <div class="twit-author">작가 : {{twit.author}}</div>
+            <div class="twit-publisher">출판사 : {{twit.publisher}}</div>
+            <div class="twit-genre">장르 : {{twit.genre}}</div>
+            <div class="twit-ISBN">ISBN : {{twit.ISBN}}</div>
+            <div class="twit-content">내용 : {{twit.content}}</div>
+            {% if twit.img %}
+            <div class="twit-img"><img src="{{twit.img}}" alt="썸네일"></div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>

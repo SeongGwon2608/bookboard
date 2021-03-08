@@ -34,9 +34,18 @@
                 <div class="navi">
                     <ul>
                         <li><a href="/myboard" class="a-btn"> My Board</a></li>
-                        <li><a id="my-profile" href="/profile" class="a-btn"> My Friend</a></li>
-                        <li><a href=""class="a-btn">Follower's Board</a></li>
+                        <!-- <li><a id="my-profile" href="/profile" class="a-btn"> My Friend</a></li> -->
                     </ul>
+                </div>
+                <div id="searching">
+                    <form id="search-form" action="/post/search" method="POST">
+                        <div class="input-group">
+                            <p>검색 :
+                                <input id="searchID" name="searchID" type="text" maxlength="50">
+                                <button id="search-btn" type="submit" class="btn">검색</button>
+                            </p>
+                        </div>
+                    </form>
                 </div>
             </aside>
             <section>

@@ -4,6 +4,7 @@ ul,li{list-style: none;}
 body{
     text-align: center;
     background: rgb(198, 202, 202);
+    padding: 10px;
 }
 .wrap{
     width: 1200px;

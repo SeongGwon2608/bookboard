@@ -12,6 +12,7 @@
   border-bottom: 1px solid silver;
   padding: 10px;
   overflow: hidden;
+  margin-left: 40px;
   }
 #img-preview { max-width: 100%; }
 
