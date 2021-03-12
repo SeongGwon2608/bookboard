@@ -1,4 +1,9 @@
 /* join.html의 css 코드 작성*/
+#join-form { padding: 10px; text-align: center; }
+#join-btn{
+    width: 100%;
+}
+
 .container{
     width: 100%;
     height: 100%;
@@ -22,7 +27,3 @@
 .input-group label { width: 25%; display: inline-block; }
 .input-group input { width: 70%; }
 
-#join-form { padding: 10px; text-align: center; }
-#join-btn{
-    width: 100%;
-}

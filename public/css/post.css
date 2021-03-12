@@ -1,12 +1,4 @@
-.createpost {
-    margin-top: 10px;
-    width: 100%;
-
-    display: inline-block;
-    border-radius: 4px;
-    vertical-align: top;
-}
-@media screen and (min-width: 800px) { .createpost { width: 500px; } }
+/* post.html에서 사용되는 css */
 #twit-form {
   text-align: left;
   border-bottom: 1px solid silver;
@@ -17,6 +9,16 @@
 #img-preview { max-width: 100%; }
 
 #img { display: none; }
+
+.createpost {
+    margin-top: 10px;
+    width: 100%;
+
+    display: inline-block;
+    border-radius: 4px;
+    vertical-align: top;
+}
+@media screen and (min-width: 800px) { .createpost { width: 500px; } }
 
 .twit-sub{
   text-align: center;
@@ -29,6 +31,7 @@
 .btn{
   width: 30%;
 }
+
 textarea {
   width: 80%;
   height: 100px;
